@@ -49,7 +49,7 @@ EOT
 
   type = map(object({
     api_management_id = string
-    developer_portal = optional(object({
+    developer_portal = optional(list(object({
       certificate                     = optional(string)
       certificate_password            = optional(string)
       host_name                       = string
@@ -57,8 +57,8 @@ EOT
       key_vault_id                    = optional(string)
       negotiate_client_certificate    = optional(bool) # Default: false
       ssl_keyvault_identity_client_id = optional(string)
-    }))
-    gateway = optional(object({
+    })))
+    gateway = optional(list(object({
       certificate                     = optional(string)
       certificate_password            = optional(string)
       default_ssl_binding             = optional(bool)
@@ -67,8 +67,8 @@ EOT
       key_vault_id                    = optional(string)
       negotiate_client_certificate    = optional(bool) # Default: false
       ssl_keyvault_identity_client_id = optional(string)
-    }))
-    management = optional(object({
+    })))
+    management = optional(list(object({
       certificate                     = optional(string)
       certificate_password            = optional(string)
       host_name                       = string
@@ -76,8 +76,8 @@ EOT
       key_vault_id                    = optional(string)
       negotiate_client_certificate    = optional(bool) # Default: false
       ssl_keyvault_identity_client_id = optional(string)
-    }))
-    portal = optional(object({
+    })))
+    portal = optional(list(object({
       certificate                     = optional(string)
       certificate_password            = optional(string)
       host_name                       = string
@@ -85,8 +85,8 @@ EOT
       key_vault_id                    = optional(string)
       negotiate_client_certificate    = optional(bool) # Default: false
       ssl_keyvault_identity_client_id = optional(string)
-    }))
-    scm = optional(object({
+    })))
+    scm = optional(list(object({
       certificate                     = optional(string)
       certificate_password            = optional(string)
       host_name                       = string
@@ -94,7 +94,7 @@ EOT
       key_vault_id                    = optional(string)
       negotiate_client_certificate    = optional(bool) # Default: false
       ssl_keyvault_identity_client_id = optional(string)
-    }))
+    })))
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_api_management_custom_domain's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,

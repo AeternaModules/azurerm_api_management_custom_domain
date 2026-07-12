@@ -4,7 +4,7 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
   api_management_id = each.value.api_management_id
 
   dynamic "developer_portal" {
-    for_each = each.value.developer_portal != null ? [each.value.developer_portal] : []
+    for_each = each.value.developer_portal != null ? each.value.developer_portal : []
     content {
       certificate                     = developer_portal.value.certificate
       certificate_password            = developer_portal.value.certificate_password
@@ -17,7 +17,7 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
   }
 
   dynamic "gateway" {
-    for_each = each.value.gateway != null ? [each.value.gateway] : []
+    for_each = each.value.gateway != null ? each.value.gateway : []
     content {
       certificate                     = gateway.value.certificate
       certificate_password            = gateway.value.certificate_password
@@ -31,7 +31,7 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
   }
 
   dynamic "management" {
-    for_each = each.value.management != null ? [each.value.management] : []
+    for_each = each.value.management != null ? each.value.management : []
     content {
       certificate                     = management.value.certificate
       certificate_password            = management.value.certificate_password
@@ -44,7 +44,7 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
   }
 
   dynamic "portal" {
-    for_each = each.value.portal != null ? [each.value.portal] : []
+    for_each = each.value.portal != null ? each.value.portal : []
     content {
       certificate                     = portal.value.certificate
       certificate_password            = portal.value.certificate_password
@@ -57,7 +57,7 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
   }
 
   dynamic "scm" {
-    for_each = each.value.scm != null ? [each.value.scm] : []
+    for_each = each.value.scm != null ? each.value.scm : []
     content {
       certificate                     = scm.value.certificate
       certificate_password            = scm.value.certificate_password
