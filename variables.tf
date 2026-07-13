@@ -55,7 +55,7 @@ EOT
       host_name                       = string
       key_vault_certificate_id        = optional(string)
       key_vault_id                    = optional(string)
-      negotiate_client_certificate    = optional(bool) # Default: false
+      negotiate_client_certificate    = optional(bool)
       ssl_keyvault_identity_client_id = optional(string)
     })))
     gateway = optional(list(object({
@@ -65,7 +65,7 @@ EOT
       host_name                       = string
       key_vault_certificate_id        = optional(string)
       key_vault_id                    = optional(string)
-      negotiate_client_certificate    = optional(bool) # Default: false
+      negotiate_client_certificate    = optional(bool)
       ssl_keyvault_identity_client_id = optional(string)
     })))
     management = optional(list(object({
@@ -74,7 +74,7 @@ EOT
       host_name                       = string
       key_vault_certificate_id        = optional(string)
       key_vault_id                    = optional(string)
-      negotiate_client_certificate    = optional(bool) # Default: false
+      negotiate_client_certificate    = optional(bool)
       ssl_keyvault_identity_client_id = optional(string)
     })))
     portal = optional(list(object({
@@ -83,7 +83,7 @@ EOT
       host_name                       = string
       key_vault_certificate_id        = optional(string)
       key_vault_id                    = optional(string)
-      negotiate_client_certificate    = optional(bool) # Default: false
+      negotiate_client_certificate    = optional(bool)
       ssl_keyvault_identity_client_id = optional(string)
     })))
     scm = optional(list(object({
@@ -92,7 +92,7 @@ EOT
       host_name                       = string
       key_vault_certificate_id        = optional(string)
       key_vault_id                    = optional(string)
-      negotiate_client_certificate    = optional(bool) # Default: false
+      negotiate_client_certificate    = optional(bool)
       ssl_keyvault_identity_client_id = optional(string)
     })))
   }))
