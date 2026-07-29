@@ -10,7 +10,6 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
       certificate_password            = developer_portal.value.certificate_password
       host_name                       = developer_portal.value.host_name
       key_vault_certificate_id        = developer_portal.value.key_vault_certificate_id
-      key_vault_id                    = developer_portal.value.key_vault_id
       negotiate_client_certificate    = developer_portal.value.negotiate_client_certificate
       ssl_keyvault_identity_client_id = developer_portal.value.ssl_keyvault_identity_client_id
     }
@@ -24,7 +23,6 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
       default_ssl_binding             = gateway.value.default_ssl_binding
       host_name                       = gateway.value.host_name
       key_vault_certificate_id        = gateway.value.key_vault_certificate_id
-      key_vault_id                    = gateway.value.key_vault_id
       negotiate_client_certificate    = gateway.value.negotiate_client_certificate
       ssl_keyvault_identity_client_id = gateway.value.ssl_keyvault_identity_client_id
     }
@@ -37,7 +35,6 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
       certificate_password            = management.value.certificate_password
       host_name                       = management.value.host_name
       key_vault_certificate_id        = management.value.key_vault_certificate_id
-      key_vault_id                    = management.value.key_vault_id
       negotiate_client_certificate    = management.value.negotiate_client_certificate
       ssl_keyvault_identity_client_id = management.value.ssl_keyvault_identity_client_id
     }
@@ -50,7 +47,6 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
       certificate_password            = portal.value.certificate_password
       host_name                       = portal.value.host_name
       key_vault_certificate_id        = portal.value.key_vault_certificate_id
-      key_vault_id                    = portal.value.key_vault_id
       negotiate_client_certificate    = portal.value.negotiate_client_certificate
       ssl_keyvault_identity_client_id = portal.value.ssl_keyvault_identity_client_id
     }
@@ -63,7 +59,6 @@ resource "azurerm_api_management_custom_domain" "api_management_custom_domains" 
       certificate_password            = scm.value.certificate_password
       host_name                       = scm.value.host_name
       key_vault_certificate_id        = scm.value.key_vault_certificate_id
-      key_vault_id                    = scm.value.key_vault_id
       negotiate_client_certificate    = scm.value.negotiate_client_certificate
       ssl_keyvault_identity_client_id = scm.value.ssl_keyvault_identity_client_id
     }
